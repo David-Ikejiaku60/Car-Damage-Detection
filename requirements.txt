@@ -1,0 +1,13 @@
+numpy
+pandas
+pillow
+matplotlib
+scikit-learn
+jupyter
+torch
+torchvision
+fastapi
+uvicorn
+python-multipart
+sqlalchemy
+psycopg[binary]
