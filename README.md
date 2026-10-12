@@ -37,13 +37,14 @@ Further details will be added as the project progresses.
 
 ## Development Roadmap
 
-* [ ] Dataset exploration and preparation.
+* [x] Dataset exploration and preparation.
 * [ ] Image preprocessing.
 * [ ] Model selection and training.
 * [ ] Model evaluation.
 * [ ] Backend API development.
 * [ ] Frontend integration.
 * [ ] Application testing and deployment.
+
 
 ## Scope and Limitations
 
@@ -52,5 +53,6 @@ DentDetect is intended to identify visible vehicle damage from images. Predictio
 The system is not intended to replace a professional vehicle inspection.
 
 ## Author
+David Ikejiaku
 
 Developed as a hands-on machine learning and computer vision learning project.
