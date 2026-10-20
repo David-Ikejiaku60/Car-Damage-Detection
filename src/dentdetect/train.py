@@ -35,7 +35,7 @@ IMAGE_SIZE: tuple[int, int] = (128, 128)
 BATCH_SIZE: int = 32
 EPOCHS: int = 10
 LEARNING_RATE: float = 0.001
-THRESHOLD: float = 0.1
+THRESHOLD: float = 0.26
 NUM_CLASSES: int = 6
 
 CLASS_NAMES: list[str] = [
