@@ -1,2 +1,15 @@
-.venv
+.venv/
 archive.zip
+prepare.ipynb
+__pycache__
+pyproject.toml
+.python-version
+car_damage_dataset
+uv.lock
+mlflow.db
+train.ipynb
+artifacts/
+src/dentdetect/mlruns/1
+src/dentdetect/__pycache__/
+src/dentdetect/mlflow.db/
+.vscode/settings.json

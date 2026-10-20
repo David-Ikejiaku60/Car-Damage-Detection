@@ -12,3 +12,4 @@ python-multipart
 sqlalchemy
 psycopg[binary]
 tqdm
+torchinfo
