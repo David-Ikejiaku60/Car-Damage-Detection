@@ -72,6 +72,44 @@ These are macro-averaged validation metrics across the six damage classes. They 
 
 A separate test-set evaluation is still needed to assess generalization.
 
+## Test Set Evaluation
+
+After selecting the prediction threshold using the validation dataset, DentDetect was evaluated on a separate test dataset to assess its performance on unseen samples.
+
+The model was evaluated using a global prediction threshold of `0.26`, selected during validation.
+
+### Overall Test Results
+
+| Metric | Validation | Test |
+|---|---:|---:|
+| Macro precision | 60.37% | 55.85% |
+| Macro recall | 79.30% | 74.88% |
+| Macro F1-score | 67.64% | 63.08% |
+
+The test results show a decrease of approximately 4 to 5 percentage points across the three macro-averaged metrics compared with validation performance.
+
+### Per-Class Test Results
+
+| Damage class | Precision | Recall | F1-score |
+|---|---:|---:|---:|
+| Dent | 51.96% | 92.99% | 66.67% |
+| Scratch | 58.33% | 95.63% | 72.46% |
+| Crack | 23.29% | 35.42% | 28.10% |
+| Glass shatter | 72.50% | 81.69% | 76.82% |
+| Lamp broken | 46.24% | 66.15% | 54.43% |
+| Tire flat | 82.76% | 77.42% | 80.00% |
+
+### Findings
+
+- **Tire flat** achieved the highest F1-score at 80.00%, followed by glass shatter at 76.82%.
+- **Dent and scratch** achieved high recall, indicating that the model identified most actual positive labels for these classes. Their lower precision suggests that they also generated a substantial number of false-positive predictions.
+- **Crack** was the most challenging class, with an F1-score of 28.10%, indicating that further improvements are needed in identifying this damage type reliably.
+- **Lamp broken** achieved moderate recall but lower precision, suggesting that the model could benefit from improvements that reduce incorrect positive predictions.
+
+Overall, the test results provide a more independent assessment of DentDetect's generalization performance. The differences between validation and test metrics highlight areas for further investigation, particularly crack detection and false-positive reduction.
+
+The model remains a learning project, and its predictions should be treated as estimates rather than definitive vehicle damage assessments.
+
 ## Experiment Tracking
 
 MLflow is used to record model training experiments and evaluation metrics. This helps compare experiments and track how changes to model settings affect performance.
